@@ -12,6 +12,7 @@
     <modules>
         <module>design_pattern</module>
         <module>lyn_common</module>
+        <module>index_study</module>
     </modules>
 
     <properties>
