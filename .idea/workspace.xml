@@ -2,48 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbead3c9-4987-4752-982a-cf116edfb9a4" name="Default Changelist" comment="一个mybatis+spring的demo">
-      <change afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/constants/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/jedis/JedisClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/thread/impl/ProcessUserBatchImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/thread/processUserBatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_study/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_study/src/test/java/com/lyn/demo/index/study/service/impl/jedis/JedisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/META-INF/design_pattern.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/annonation/Excutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/annonation/MyLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/annonation/analizer/ExcutorAnalizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/annonation/aspect/MyLogAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/launcher/DesignPatternLauncher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/abstracts/AbstractExcutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/enums/ModuleEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/excutor/AgeExcutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/excutor/NameExcutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/excutor/SexExcutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/param/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/rpc/UserRpcService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/com/lyn/demo/design/pattern/template/rpc/impl/UserRpcServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/classes/spring-main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_pattern/target/test-classes/template/TemplateTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/java/com/lyn/demo/index/study/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/main/resources/spring-main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/main/resources/spring-main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/src/test/java/com/lyn/demo/index/study/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/index_study/src/test/java/com/lyn/demo/index/study/service/impl/UserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/com/lyn/demo/index/study/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/com/lyn/demo/index/study/domain/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/com/lyn/demo/index/study/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/com/lyn/demo/index/study/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/launcher/IndexStudyLauncher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/classes/spring-main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_study/target/test-classes/com/lyn/demo/index/study/service/impl/UserServiceImplTest.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/threadPool.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,6 +75,9 @@
       <recent name="com.lyn.demo.index.study.service.impl" />
       <recent name="com.lyn.demo.index.study.service" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lyn.demo.index.study.constants" />
       <recent name="com.lyn.demo.index.study" />
@@ -122,10 +85,9 @@
       <recent name="com.lyn.demo.index.study.jedis" />
       <recent name="com.lyn.demo.redis.server.jedis" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/index_study" />
       <recent name="$PROJECT_DIR$/redis_server/src/main/resources" />
       <recent name="$PROJECT_DIR$/index_study/src/main/resources" />
       <recent name="$PROJECT_DIR$/design_pattern/src/main/resources" />
@@ -273,6 +235,7 @@
       <workItem from="1576806784672" duration="3744000" />
       <workItem from="1576822020955" duration="11269000" />
       <workItem from="1576837858489" duration="2445000" />
+      <workItem from="1576856310706" duration="557000" />
     </task>
     <servers />
   </component>
