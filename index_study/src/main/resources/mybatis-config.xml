@@ -20,13 +20,10 @@
     </settings>
 
     <typeAliases>
-        <typeAlias alias="user" type="com.lyn.demo.index.study.domain.User"/>
+        <typeAlias alias="lynUser" type="com.lyn.demo.index.study.domain.User"/>
     </typeAliases>
 
     <!--<plugins>
 
     </plugins>-->
-    <mappers>
-        <mapper resource="mapper/UserMapper.xml" />
-    </mappers>
 </configuration>

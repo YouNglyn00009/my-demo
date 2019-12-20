@@ -15,6 +15,6 @@ public class ThreadPoolTest {
     public void threadPoolTest1() {
         ExecutorService executorService = Executors.newScheduledThreadPool(3);
 
-        executorService.execute();
+//        executorService.execute();
     }
 }

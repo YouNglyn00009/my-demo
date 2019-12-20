@@ -1,0 +1,11 @@
+
+.idea/
+*.jar
+*.sql
+*.iml
+.idea
+target/
+*.class
+eclp-so-main/target/
+eclp-so-support/target/
+*.orig

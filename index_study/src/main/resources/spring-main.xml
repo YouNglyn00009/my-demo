@@ -17,6 +17,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath*:mapper/*.xml" />
     </bean>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" >
@@ -74,5 +75,26 @@
         <!-- 连接被泄露时是否打印 -->
         <property name="logAbandoned" value="${dbcp.logAbandoned}"/>
 
+    </bean>
+
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="1000" />
+        <property name="maxActive" value="1000" />
+        <property name="maxWait" value="2000" />
+        <property name="testOnBorrow" value="true" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnReturn" value="true" />
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool"  destroy-method="destroy">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig" />
+        <constructor-arg name="host" value="127.0.0.1" />
+        <constructor-arg name="port" value="6379" />
+        <constructor-arg name="timeout" value="0" />
+        <!--        <constructor-arg name="password" value="redispwd" />-->
+    </bean>
+
+    <bean id="jedisClient" class="com.lyn.demo.index.study.jedis.JedisClient" >
+        <constructor-arg name="jedisPool" ref="jedisPool" />
     </bean>
 </beans>

@@ -3,9 +3,8 @@
 
 <mapper namespace="com.lyn.demo.index.study.dao.UserDao">
 
-    <resultMap id="BaseResultMap" type="user">
+    <resultMap id="BaseResultMap" type="lynUser">
         <id column="id" property="id" jdbcType="BIGINT"/>
-        <result column="user_no" property="userNo" jdbcType="VARCHAR"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
         <result column="sex" property="sex" jdbcType="INTEGER"/>
         <result column="age" property="age" jdbcType="INTEGER"/>
@@ -17,11 +16,9 @@
         <result column="yn" property="yn" jdbcType="TINYINT"/>
     </resultMap>
 
-    <insert id="insertUser" parameterType="user" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertUser" parameterType="lynUser" useGeneratedKeys="true" keyProperty="id">
         insert into lyn_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            id,
-            user_no,
             user_name,
             sex,
             age,
@@ -34,8 +31,6 @@
         </trim>
         values
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            #{id,jdbcType=BIGINT},
-            #{userNo,jdbcType=VARCHAR},
             #{userName,jdbcType=VARCHAR},
             #{sex,jdbcType=INTEGER},
             #{age,jdbcType=INTEGER},
@@ -46,5 +41,35 @@
             #{updateUser,jdbcType=VARCHAR},
             1,
         </trim>
+    </insert>
+
+
+    <insert id="insertUserBatch" parameterType="java.util.List">
+        insert into lyn_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            user_name,
+            sex,
+            age,
+            nick_name,
+            create_time,
+            update_time,
+            create_user,
+            update_user,
+            yn,
+        </trim>
+        values
+        <foreach collection="list" item="user" index="index" separator="," >
+            <trim prefix="(" suffix=")" suffixOverrides=",">
+                #{user.userName,jdbcType=VARCHAR},
+                #{user.sex,jdbcType=INTEGER},
+                #{user.age,jdbcType=INTEGER},
+                #{user.nickName,jdbcType=VARCHAR},
+                now(),
+                now(),
+                #{user.createUser,jdbcType=VARCHAR},
+                #{user.updateUser,jdbcType=VARCHAR},
+                1,
+            </trim>
+        </foreach>
     </insert>
 </mapper>
