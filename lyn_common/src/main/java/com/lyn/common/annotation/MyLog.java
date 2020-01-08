@@ -1,4 +1,4 @@
-package com.lyn.demo.design.pattern.annonation;
+package com.lyn.common.annotation;
 
 import java.lang.annotation.*;
 

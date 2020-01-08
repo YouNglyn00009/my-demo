@@ -1,4 +1,4 @@
-package com.lyn.demo.design.pattern.annonation.aspect;
+package com.lyn.common.aspect;
 
 import com.lyn.common.json.FastJsonUtil;
 import lombok.extern.log4j.Log4j2;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class MyLogAspect {
 
-    @Around("@annotation(com.lyn.demo.design.pattern.annonation.MyLog)")
+    @Around("@annotation(com.lyn.common.annotation.MyLog)")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
 
         long startTime = System.nanoTime();

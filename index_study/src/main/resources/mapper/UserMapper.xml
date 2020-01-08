@@ -5,9 +5,9 @@
 
     <resultMap id="BaseResultMap" type="lynUser">
         <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_no" property="userNo" jdbcType="VARCHAR"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
-        <result column="sex" property="sex" jdbcType="INTEGER"/>
-        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="is_vip" property="isVip" jdbcType="TINYINT"/>
         <result column="nick_name" property="nickName" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
@@ -16,12 +16,29 @@
         <result column="yn" property="yn" jdbcType="TINYINT"/>
     </resultMap>
 
+    <sql id="Base_Column_List">
+        <trim prefix="" suffix="" suffixOverrides=",">
+            id,
+            user_no,
+            user_name,
+            is_vip,
+            nick_name,
+            create_time,
+            update_time,
+            create_user,
+            update_user,
+            ts,
+            yn,
+        </trim>
+    </sql>
+
     <insert id="insertUser" parameterType="lynUser" useGeneratedKeys="true" keyProperty="id">
         insert into lyn_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
+            id,
+            user_no,
             user_name,
-            sex,
-            age,
+            is_vip,
             nick_name,
             create_time,
             update_time,
@@ -31,9 +48,10 @@
         </trim>
         values
         <trim prefix="(" suffix=")" suffixOverrides=",">
+            #{id,jdbcType=BIGINT},
+            #{userNo,jdbcType=VARCHAR},
             #{userName,jdbcType=VARCHAR},
-            #{sex,jdbcType=INTEGER},
-            #{age,jdbcType=INTEGER},
+            #{isVip,jdbcType=TINYINT},
             #{nickName,jdbcType=VARCHAR},
             now(),
             now(),
@@ -47,9 +65,10 @@
     <insert id="insertUserBatch" parameterType="java.util.List">
         insert into lyn_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
+            id,
+            user_no,
             user_name,
-            sex,
-            age,
+            is_vip,
             nick_name,
             create_time,
             update_time,
@@ -60,9 +79,10 @@
         values
         <foreach collection="list" item="user" index="index" separator="," >
             <trim prefix="(" suffix=")" suffixOverrides=",">
+                #{user.id,jdbcType=BIGINT},
+                #{user.userNo,jdbcType=VARCHAR},
                 #{user.userName,jdbcType=VARCHAR},
-                #{user.sex,jdbcType=INTEGER},
-                #{user.age,jdbcType=INTEGER},
+                #{user.isVip,jdbcType=TINYINT},
                 #{user.nickName,jdbcType=VARCHAR},
                 now(),
                 now(),
@@ -72,4 +92,28 @@
             </trim>
         </foreach>
     </insert>
+
+    <update id="updateUser">
+        update lyn_user
+        <set>
+            <if test="userName != null and userName != ''" >
+                user_name = #{userName, jdbcType=VARCHAR}
+            </if>
+            <if test="isVip != null" >
+                is_vip = #{isVip, jdbcType=TINYINT}
+            </if>
+            <if test="nickName != null and nickName != ''" >
+                nick_name = #{nickName, jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="getUser" resultType="com.lyn.demo.index.study.domain.User" parameterType="Long">
+        select
+        <include refid="Base_Column_List" />
+        from lyn_user
+        where id = #{id,jdbcType=BIGINT}
+        and yn=1
+    </select>
 </mapper>

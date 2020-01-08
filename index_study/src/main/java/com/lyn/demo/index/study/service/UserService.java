@@ -13,4 +13,8 @@ public interface UserService {
 
     void insertUserBatch(List<User> userList);
 
+    User getUser(Long id);
+
+    void updateUser(User user);
+
 }

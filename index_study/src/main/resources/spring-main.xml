@@ -97,4 +97,6 @@
     <bean id="jedisClient" class="com.lyn.demo.index.study.jedis.JedisClient" >
         <constructor-arg name="jedisPool" ref="jedisPool" />
     </bean>
+
+    <bean id="idGenerator" class="com.lyn.demo.index.study.idgen.IdGenerator" />
 </beans>
