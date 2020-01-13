@@ -9,5 +9,5 @@ public abstract class Student {
      * 接收消息
      * @param teacher
      */
-    public abstract void receiveMsg(Teacher teacher);
+    public abstract void receiveMsg(Teacher teacher, String msg);
 }

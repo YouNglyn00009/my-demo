@@ -1,29 +1,34 @@
 package observer;
 
+import com.lyn.demo.design.pattern.observer.abstracts.Student;
 import com.lyn.demo.design.pattern.observer.abstracts.Teacher;
-import com.lyn.demo.design.pattern.observer.annonation.InitObserver;
 import com.lyn.demo.design.pattern.observer.impl.MathTeacher;
+import com.lyn.demo.design.pattern.observer.impl.StudentImpl;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.annotation.Resource;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @Description
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-main.xml"})
 public class ObserverTest {
 
-    @Resource
-    private InitObserver initObserver;
 
     @Test
     public void observerTest() {
-        Teacher mathTeacher = new MathTeacher(initObserver);
+
+        Student studentA = new StudentImpl("StudentA");
+        Student studentB = new StudentImpl("StudentB");
+
+        Set<Student> students = new HashSet<Student>();
+        students.add(studentA);
+        students.add(studentB);
+
+        Teacher mathTeacher = new MathTeacher();
         mathTeacher.setTeacherName("数学老师");
+        mathTeacher.setObserverSet(students);
+
         mathTeacher.sendMsg("考试结束！");
     }
 

@@ -2,21 +2,22 @@ package com.lyn.demo.design.pattern.observer.impl;
 
 import com.lyn.demo.design.pattern.observer.abstracts.Student;
 import com.lyn.demo.design.pattern.observer.abstracts.Teacher;
-import com.lyn.demo.design.pattern.observer.annonation.Observer;
 import org.springframework.stereotype.Service;
 
 /**
- * @Description
+ * @Description 观察者-学生A
  */
-@Observer
-@Service("studentB")
-public class StudentB extends Student {
+public class StudentImpl extends Student {
 
-    private String name = "学生B";
+    private String name;
+
+    public StudentImpl(String name) {
+        this.name = name;
+    }
 
     @Override
-    public void receiveMsg(Teacher teacher) {
-        System.out.println(this.name + "收到了" + teacher.getTeacherName() + "发送的消息:" + teacher.getMsg());
+    public void receiveMsg(Teacher teacher, String msg) {
+        System.out.println(this.name + "收到了" + teacher.getTeacherName() + "发送的消息:" + msg);
     }
 
     public String getName() {
