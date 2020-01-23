@@ -2,7 +2,6 @@ package com.lyn.demo.design.pattern.observer.impl;
 
 import com.lyn.demo.design.pattern.observer.abstracts.Student;
 import com.lyn.demo.design.pattern.observer.abstracts.Teacher;
-import org.springframework.stereotype.Service;
 
 /**
  * @Description 观察者-学生A
