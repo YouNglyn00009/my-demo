@@ -8,6 +8,10 @@ import com.lyn.demo.design.pattern.template.param.User;
  */
 public abstract class AbstractExcutor {
 
-    public abstract User excute(User user);
+    protected abstract void excute(User user);
+
+    public final void doProcessor(User user) {
+        excute(user);
+    }
 
 }

@@ -12,4 +12,10 @@
 
     <bean id="excutorAnalizer" class="com.lyn.demo.design.pattern.annonation.analizer.ExcutorAnalizer"/>
 
+    <util:list id="chooserHolderIndexStrategyList" list-class="java.util.ArrayList" value-type="com.lyn.demo.design.pattern.template.index.AbstractIndexStrategy">
+        <ref bean="sexIndex"/>
+    </util:list>
+
+    <bean id="sexIndex" class="com.lyn.demo.design.pattern.template.index.impl.SexIndex" />
+
 </beans>

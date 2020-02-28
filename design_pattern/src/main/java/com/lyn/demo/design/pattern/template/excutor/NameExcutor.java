@@ -15,16 +15,15 @@ import javax.annotation.Resource;
  */
 @Log4j2
 @Service
-@Excutor(moduleName = ModuleEnum.MOUDLE_NAME)
+@Excutor(ModuleEnum.MOUDLE_NAME)
 public class NameExcutor extends AbstractExcutor {
 
     @Resource
     private UserRpcService userRpcService;
 
-    public User excute(User user) {
+    public void excute(User user) {
         user.setName("yl");
         String echoStr = userRpcService.processUser(user);
         user.setEchoStr(echoStr);
-        return user;
     }
 }

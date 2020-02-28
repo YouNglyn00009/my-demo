@@ -19,4 +19,19 @@ public enum ModuleEnum {
         this.moudleName = moudleName;
         this.moudleDesc = moudleDesc;
     }
-}
+
+    public String getMoudleName() {
+        return moudleName;
+    }
+
+    public void setMoudleName(String moudleName) {
+        this.moudleName = moudleName;
+    }
+
+    public String getMoudleDesc() {
+        return moudleDesc;
+    }
+
+    public void setMoudleDesc(String moudleDesc) {
+        this.moudleDesc = moudleDesc;
+    }}

@@ -10,11 +10,10 @@ import org.springframework.stereotype.Service;
  * @Description
  */
 @Service
-@Excutor(moduleName = ModuleEnum.MOUDLE_AGE)
+@Excutor(ModuleEnum.MOUDLE_AGE)
 public class AgeExcutor extends AbstractExcutor {
 
-    public User excute(User user) {
+    public void excute(User user) {
         user.setAge(11);
-        return user;
     }
 }

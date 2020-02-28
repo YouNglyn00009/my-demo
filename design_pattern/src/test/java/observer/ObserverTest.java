@@ -1,5 +1,6 @@
 package observer;
 
+import com.lyn.demo.design.pattern.enums.MarkEnum;
 import com.lyn.demo.design.pattern.observer.abstracts.Student;
 import com.lyn.demo.design.pattern.observer.abstracts.Teacher;
 import com.lyn.demo.design.pattern.observer.impl.MathTeacher;
@@ -30,6 +31,11 @@ public class ObserverTest {
         mathTeacher.setObserverSet(students);
 
         mathTeacher.sendMsg("考试结束！");
+    }
+
+    @Test
+    public void byteTest() {
+        System.out.println(Byte.valueOf(String.valueOf(MarkEnum.IS_RELIEVED_SEND_2.getKey())));
     }
 
 }

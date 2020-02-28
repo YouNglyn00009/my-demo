@@ -1,16 +1,14 @@
 package com.lyn.demo.design.pattern.template.param;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.Date;
 
 /**
  * @Description
  */
-@Getter
-@Setter
+@Data
 public class User {
 
     private String name;
@@ -21,20 +19,9 @@ public class User {
 
     private String echoStr;
 
-    private Date bir = new Date();
+    private String behavior;
 
-    @Override
-    public String toString() {
-        return "{"
-                + "\"name\":\""
-                + name + '\"'
-                + ",\"age\":"
-                + age
-                + ",\"sex\":"
-                + sex
-                + ",\"echoStr\":\""
-                + echoStr + '\"'
-                + "}";
+    private Date bir;
 
-    }
+
 }

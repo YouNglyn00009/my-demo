@@ -3,7 +3,10 @@ package template;
 import com.lyn.common.json.FastJsonUtil;
 import com.lyn.common.json.JsonUtil;
 import com.lyn.demo.design.pattern.annonation.analizer.ExcutorAnalizer;
+import com.lyn.demo.design.pattern.template.context.TemContext;
 import com.lyn.demo.design.pattern.template.enums.ModuleEnum;
+import com.lyn.demo.design.pattern.template.enums.SexTypeEnum;
+import com.lyn.demo.design.pattern.template.model.IAM;
 import com.lyn.demo.design.pattern.template.param.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,9 +30,11 @@ public class TemplateTest {
     @Test
     public void templateTest() {
         User user = new User();
-        excutorAnalizer.excute(ModuleEnum.MOUDLE_AGE, user);
-        excutorAnalizer.excute(ModuleEnum.MOUDLE_NAME, user);
-        excutorAnalizer.excute(ModuleEnum.MOUDLE_SEX, user);
+        user.setSex((byte) 2);
+        TemContext temContext = TemContext.create(user);
+        excutorAnalizer.excute(ModuleEnum.MOUDLE_AGE, temContext);
+        excutorAnalizer.excute(ModuleEnum.MOUDLE_NAME, temContext);
+        excutorAnalizer.excute(ModuleEnum.MOUDLE_SEX, temContext);
         System.out.println(user);
     }
 
